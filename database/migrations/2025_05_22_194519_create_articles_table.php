@@ -11,6 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::create('article_categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->timestamps();
+        });
+
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->foreignId('article_category_id')->constrained()->cascadeOnDelete();
@@ -18,12 +24,6 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('content');
             $table->string('image')->nullable();
-            $table->timestamps();
-        });
-
-        Schema::create('article_categories', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
             $table->timestamps();
         });
     }
