@@ -21,10 +21,6 @@ class UsersRolesAndPermissionsSeeder extends Seeder
         // Create permissions
         $permissions = [
             'manage users',
-            'view users',
-            'create users',
-            'edit users',
-            'delete users',
             'manage roles',
             'manage permissions',
             'access dashboard',
@@ -45,10 +41,6 @@ class UsersRolesAndPermissionsSeeder extends Seeder
         // Assign a subset of permissions to admin
         $adminPermissions = [
             'manage users',
-            'view users',
-            'create users',
-            'edit users',
-            'delete users',
             'access dashboard',
         ];
         $adminRole->givePermissionTo($adminPermissions);
