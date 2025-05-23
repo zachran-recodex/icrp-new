@@ -9,7 +9,7 @@
 
     <div class="flex flex-wrap items-center justify-between gap-4">
         <div class="flex flex-wrap gap-4 md:w-2/3">
-            <div class="w-full md:w-2/3">
+            <div class="w-full md:w-1/3">
                 <flux:input wire:model.live.debounce.300ms="search" placeholder="Search articles..." icon="magnifying-glass" />
             </div>
             <div class="w-full md:w-1/3">

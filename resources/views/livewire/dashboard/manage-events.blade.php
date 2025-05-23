@@ -9,10 +9,10 @@
 
     <div class="flex flex-wrap items-center justify-between gap-4">
         <div class="flex flex-wrap gap-4 md:w-2/3">
-            <div class="w-full md:w-1/2">
+            <div class="w-full md:w-1/3">
                 <flux:input wire:model.live.debounce.300ms="search" placeholder="Search events..." icon="magnifying-glass" />
             </div>
-            <div class="w-full md:w-1/2">
+            <div class="w-full md:w-1/3">
                 <flux:select wire:model.live="timeFilter">
                     <option value="">All Events</option>
                     <option value="upcoming">Upcoming Events</option>

@@ -8,11 +8,11 @@
     </div>
 
     <div class="flex flex-wrap items-center justify-between gap-4">
-        <div class="flex flex-wrap gap-4 md:w-2/3">
-            <div class="w-full md:w-1/3">
+        <div class="flex flex-wrap gap-4 md:w-3/4">
+            <div class="w-full md:w-1/4">
                 <flux:input wire:model.live.debounce.300ms="search" placeholder="Search libraries..." icon="magnifying-glass" />
             </div>
-            <div class="w-full md:w-1/3">
+            <div class="w-full md:w-1/4">
                 <flux:select wire:model.live="categoryFilter">
                     <option value="">All Categories</option>
                     @foreach($categoryOptions as $category)
@@ -20,7 +20,7 @@
                     @endforeach
                 </flux:select>
             </div>
-            <div class="w-full md:w-1/3">
+            <div class="w-full md:w-1/4">
                 <flux:select wire:model.live="languageFilter">
                     <option value="">All Languages</option>
                     @foreach($languageOptions as $language)
