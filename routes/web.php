@@ -24,6 +24,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/libraries', App\Livewire\Dashboard\ManageLibraries::class)->name('libraries');
         Route::get('/programs', App\Livewire\Dashboard\ManagePrograms::class)->name('programs');
         Route::get('/call-to-action', App\Livewire\Dashboard\ManageCallToAction::class)->name('call-to-action');
+        Route::get('/advocacies', App\Livewire\Dashboard\ManageAdvocacies::class)->name('advocacies');
     });
 
     Route::redirect('settings', 'settings/profile');
