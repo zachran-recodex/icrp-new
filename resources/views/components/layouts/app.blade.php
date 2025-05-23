@@ -18,6 +18,7 @@
                     <flux:navlist.item icon="tag" :href="route('dashboard.article-categories')" :current="request()->routeIs('dashboard.article-categories')" wire:navigate>Article Categories</flux:navlist.item>
                     <flux:navlist.item icon="document-text" :href="route('dashboard.articles')" :current="request()->routeIs('dashboard.articles')" wire:navigate>Articles</flux:navlist.item>
                     <flux:navlist.item icon="calendar" :href="route('dashboard.events')" :current="request()->routeIs('dashboard.events')" wire:navigate>Events</flux:navlist.item>
+                    <flux:navlist.item icon="user" :href="route('dashboard.founders')" :current="request()->routeIs('dashboard.founders')" wire:navigate>Founders</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
