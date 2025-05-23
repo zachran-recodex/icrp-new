@@ -2,11 +2,34 @@
 
 use Livewire\Volt\Volt;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Dashboard\HeroController;
+use App\Http\Controllers\MainController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::controller(MainController::class)->group(function () {
+    Route::get('/', 'index')->name('beranda');
+
+    Route::get('/tentang-kami', 'tentang')->name('tentang');
+
+    Route::get('/pendiri', 'pendiri')->name('pendiri');
+    Route::get('/pendiri/{slug}', 'pendiriDetail')->name('pendiri.detail');
+
+    Route::get('/pengurus', 'pengurus')->name('pengurus');
+    Route::get('/pengurus/{slug}', 'pengurusDetail')->name('pengurus.detail');
+
+    Route::get('/kontak', 'kontak')->name('kontak');
+
+    Route::get('/sahabat', 'sahabat')->name('sahabat');
+
+    Route::get('/jaringan', 'jaringan')->name('jaringan');
+
+    Route::get('/berita-artikel', 'berita')->name('berita');
+    Route::get('/berita-artikel/{slug}', 'beritaDetail')->name('berita.detail');
+
+    Route::get('/pustaka', 'pustaka')->name('pustaka');
+    Route::get('/pustaka/{slug}', 'pustakaDetail')->name('pustaka.detail');
+
+    Route::get('/advokasi', 'advokasi')->name('advokasi');
+    Route::get('/advokasi/{slug}', 'advokasiDetail')->name('advokasi.detail');
+});
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
