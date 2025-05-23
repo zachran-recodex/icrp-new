@@ -22,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/founders', App\Livewire\Dashboard\ManageFounders::class)->name('founders');
         Route::get('/members', App\Livewire\Dashboard\ManageMembers::class)->name('members');
         Route::get('/libraries', App\Livewire\Dashboard\ManageLibraries::class)->name('libraries');
+        Route::get('/programs', App\Livewire\Dashboard\ManagePrograms::class)->name('programs');
     });
 
     Route::redirect('settings', 'settings/profile');
