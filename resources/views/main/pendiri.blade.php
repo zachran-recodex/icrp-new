@@ -1,27 +1,27 @@
 @section('meta_tag')
-    <meta name="description" content="{{ optional($pageSetups['pendiri'])->meta_description ?? '' }}">
-    <meta name="keywords" content="{{ optional($pageSetups['pendiri'])->meta_keywords ?? '' }}">
-    <meta name="author" content="RECODEX ID">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="{{ optional($pageSetups['pendiri'])->title ?? 'Profil Pendiri ICRP' }}">
-    <meta property="og:description" content="{{ optional($pageSetups['pendiri'])->meta_description ?? '' }}">
-    <meta property="og:image" content="{{ isset($heroSection) && $heroSection->image ? Storage::url('hero/' . $heroSection->image) : asset('images/hero.jpeg') }}">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ optional($pageSetups['pendiri'])->title ?? 'Profil Pendiri ICRP' }}">
-    <meta name="twitter:description" content="{{ optional($pageSetups['pendiri'])->meta_description ?? '' }}">
-    <meta name="twitter:image" content="{{ isset($heroSection) && $heroSection->image ? Storage::url('hero/' . $heroSection->image) : asset('images/hero.jpeg') }}">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
 
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <title>{{ optional($pageSetups['pendiri'])->title ?? 'Profil Pendiri ICRP' }}</title>
+    <title>Profil Pendiri ICRP</title>
 @endsection
 
-<x-main-layout>
+<x-layouts.main>
     <!-- Hero Section -->
     <x-hero-section :title="$heroSection->title" :image="$heroSection->image" />
 
@@ -59,4 +59,4 @@
         :button-text="$callToAction->button_text"
         :button-link="route('kontak')"
     />
-</x-main-layout>
+</x-layouts.main>
