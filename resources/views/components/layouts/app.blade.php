@@ -22,6 +22,7 @@
                     <flux:navlist.item icon="user-group" :href="route('dashboard.members')" :current="request()->routeIs('dashboard.members')" wire:navigate>Members</flux:navlist.item>
                     <flux:navlist.item icon="book-open" :href="route('dashboard.libraries')" :current="request()->routeIs('dashboard.libraries')" wire:navigate>Library</flux:navlist.item>
                     <flux:navlist.item icon="puzzle-piece" :href="route('dashboard.programs')" :current="request()->routeIs('dashboard.programs')" wire:navigate>Programs</flux:navlist.item>
+                    <flux:navlist.item icon="megaphone" :href="route('dashboard.call-to-action')" :current="request()->routeIs('dashboard.call-to-action')" wire:navigate>Call to Action</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
